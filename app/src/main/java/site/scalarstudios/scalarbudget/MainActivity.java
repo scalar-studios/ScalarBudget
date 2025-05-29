@@ -1,12 +1,19 @@
 package site.scalarstudios.scalarbudget;
 
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import site.scalarstudios.scalarbudget.cards.CardAdapter;
+import site.scalarstudios.scalarbudget.cards.SubCard;
 
 /**
  * MainActivity is the entry point of the Scalar Budget application.
@@ -33,5 +40,15 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        List<SubCard> cardItems = new ArrayList<>();
+        cardItems.add(new SubCard(R.drawable.image1, 12.34));
+        cardItems.add(new SubCard(R.drawable.image2, 56.78));
+
+        CardAdapter adapter = new CardAdapter(this, cardItems);
+        recyclerView.setAdapter(adapter);
     }
 }
