@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ScalarBudget</string>
+    <string name="title_activity_add_subscription">AddSubscriptionActivity</string>
+</resources>
