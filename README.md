@@ -20,7 +20,7 @@ Your data will never be shared, sold, or distributed to third parties.
 To build Scalar Budget from source:
 
 ```bash
-git clone https://github.com/Lemon-Juiced/ScalarBudget.git
+git clone https://github.com/scalar-studios/ScalarBudget.git
 ```
 
 Then open the project in Android Studio and click Run.
